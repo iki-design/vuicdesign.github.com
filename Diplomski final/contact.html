@@ -1,0 +1,46 @@
+<!DOCTYPE_html>
+<html>
+	<head>
+		<title>Vuic design</title>
+		<link rel="stylesheet" type="text/css" href="meni.css"/>
+		<link rel="stylesheet" type="text/css" href="cont.css"/>
+	</head>
+	<body>
+		<div class="header">
+		<div id="logo">
+			<a href="index.html"><img src="img/logo.jpg"/></a>
+		</div>
+		
+		<div id="menuToggle">
+			<input type="checkbox" />
+			<span></span>
+			<span></span>
+			<span></span>
+		<ul id="menu">
+			<a href="index.html" ><li>Work</li></a>
+			<a href="about.html"><li>About</li></a>
+			<a href="contact.html" class="active"><li>Contact</li></a>
+		</ul>
+		</div>
+		</div>
+		<hr>
+		<form action="/action_page.php" method="get" id="cont">
+			<h1>Welcome,</h1>
+			<label>
+				<span>Name</span>
+				<input type="text" name="name"/>
+			</label>
+			<label>
+				<span>Email</span>
+				<input type="text" name="e-mail"/>
+			</label>
+			<label>
+				<span>Message</span>
+				<input type="text-box" name="message"/>
+			</label>
+			<input class="submit" type="submit" value="Send message" />
+		</form>
+		
+		
+	</body>
+</html>

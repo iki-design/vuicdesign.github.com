@@ -1,0 +1,224 @@
+body{
+	width:100%;
+	margin:0px;
+	overflow-x:hidden;
+	overflow-y:scroll;
+}
+.header {
+	width:80%;
+	max-width:1200px;
+	margin:0 auto;
+}
+.loogo a {
+	position:absolute;
+}
+.loogo a:before{
+	display:none;
+}
+img{
+	height:70px;
+	float:left;
+	margin-top:5px;
+	margin-left:0;
+	padding-bottom:0;
+}
+hr {
+	margin-top:63px;
+	position:absolute;
+	width:100%;
+	z-index:-1;
+	height:1px;
+	background-color:#000;
+}
+ul {
+	list-style-type:none;
+	position:relative;
+	float:right;
+	margin-top:55px;
+	margin-right:0;
+	padding:0;
+}
+li {
+	display:inline;
+	font-family:sans-serif;
+	font-size:1.2em;
+	padding-left:0px;
+	text-transform:uppercase;
+	background-color:rgba(255,255,255,0);
+	padding:0;
+	margin:0;
+	}
+a {
+	text-decoration:none;
+	color:#000;
+	transition: color 0.3s ease;
+	padding-bottom:3px;
+	position: relative;
+    margin: 0 5px; /* NE DIRAJ */
+    transition: color 0.1s,background-color 0.1s,padding 0.2s ease-in;
+    color: #000;
+}
+a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: color 0.1s,transform 0.2s ease-out;
+}
+
+a:hover::before, a:focus::before, a.active::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+input {
+	opacity:0;
+}
+@media (max-width:700px) {
+	#menuToggle {
+		display:block;
+		position:relative;
+		top: -10px;
+		z-index: 1;
+		-webkit-user-select: none;
+		user-select: none;
+		background-color:;
+		margin:0 auto;
+		margin-right:15%;
+		margin-bottom:95%;
+		width:0px;
+		margin-top:0px;
+		height:100%;
+		padding-top:25px;
+		
+	}
+	#menuToggle input {
+		display: block;
+		width: 40px;
+		height: 40px;
+		position: absolute;
+		top: -15px;
+		left: 10px;
+		cursor: pointer;
+		opacity: 0; /* hide this */
+		z-index: 4; /* and place it over the hamburger */
+		-webkit-touch-callout: none;
+		margin-top:30px;
+		margin-left:-50px;
+	}
+	/* boja i dimenzije burger bara */
+	#menuToggle span {
+		display:block;
+		width:33px;
+		height:4px;
+		margin-bottom:5px;
+		background-color:#000;
+		opacity:1;
+		border-radius:3px;
+		z-index:2;
+		margin-left:-45px;
+		transform-origin:4px 0px;
+		transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+	}
+	#menuToggle span:first-child {
+		transform-origin: 0% 0%;
+	}
+	#menuToggle span:nth-last-child(2) {
+		transform-origin: 0% 100%;
+}
+	#menuToggle input:checked ~ span {
+	opacity: 1;
+	transform: rotate(45deg) translate(-2px, -1px);
+	background: #000;
+	}
+	#menuToggle input:checked ~ span:nth-last-child(3){
+		opacity: 0;
+		transform: rotate(0deg) scale(0.2, 0.2);
+	}
+	#menuToggle input:checked ~ span:nth-last-child(2){
+		opacity: 1;
+		transform: rotate(-45deg) translate(0, -1px) ;
+	}
+	#menuToggle li{
+		display:block;
+		padding:0;
+		
+	}
+	#menuToggle a{
+		padding:1px;
+		padding-bottom:5px;
+		transition:0.3 ease;
+		position:relative;
+		display:block;
+		margin:0 5px;
+		
+		transition: color 0.1s, background 0.1, padding 0.2 ease-in;
+		color:#fff;
+		/* width:70px; */
+	}
+	a:hover {
+		color:#f0f;
+	}
+	a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: color 0.1s,transform 0.2s ease-out;
+}
+
+a:hover::before, a:focus::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
+}
+	a:first-child::before{
+		width:33%;
+	}
+	a:nth-last-child(2)::before{
+		width:37%;
+	}
+	a:last-child {
+		width:47%;
+	}
+	#menu {
+		position:absolute;
+		width:200px;
+		height:1000px;
+		margin:-60px 0 0 -70px;
+		padding:0px;
+		padding-top:120px;
+		padding-left:10px;
+		background-color:rgba(0,0,0,0.7);
+		/* transform-origin:0% 0%; */
+		border-left:1px solid #665;
+		transform: translate(140%, 0);
+		opacity:1;
+		transition:transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+		z-index:3;
+	}
+	#menuToggle input:checked ~ ul{
+		transform: none;
+		opacity:1;
+	}
+	hr {
+		position:absolute !important;
+		top:20;
+	}
+}
+
+
+
+
+
